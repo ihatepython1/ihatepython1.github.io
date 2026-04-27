@@ -1,7 +1,7 @@
-import Resume from './Resume.jsx'
+import Resume from "./Resume.jsx";
 
 function App() {
-  return <Resume />
+  return <Resume />;
 }
 
-export default App
+export default App;

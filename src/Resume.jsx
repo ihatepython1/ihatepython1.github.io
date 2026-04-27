@@ -50,7 +50,7 @@ const experience = [
       "Designed dashboards and summary reports to support decision-making and performance monitoring.",
       "Applied statistical and machine learning techniques to solve classification and prediction problems.",
       "Presented technical findings in clear business language with visual storytelling.",
-      "Worked with coding tools such as Python, SQL, and JavaScript to build practical solutions for data-related tasks.",
+      "Worked with Python, SQL, and JavaScript to build practical solutions for data-related tasks.",
       "Improved project quality through debugging, testing, and refining data processing workflows.",
     ],
   },
@@ -106,9 +106,9 @@ const codingHighlights = [
 ];
 
 function scrollToPortfolio() {
-  const el = document.getElementById("portfolio");
-  if (el) {
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  const section = document.getElementById("portfolio");
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 }
 
@@ -164,8 +164,28 @@ function PdfLink({ href, dark = false }) {
           : "border-white/15 bg-white/10 text-white/90 backdrop-blur-sm hover:-translate-y-0.5 hover:border-white/35 hover:bg-white/15"
       }`}
     >
-      My Portfolio
+      PDF
     </a>
+  );
+}
+
+function HeroButton({ children, onClick }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="inline-flex min-w-[172px] items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-3 text-sm font-medium text-white shadow-2xl backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:bg-white/15"
+    >
+      {children}
+    </button>
+  );
+}
+
+function InfoCard({ children }) {
+  return (
+    <article className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition duration-300 hover:border-slate-700 hover:bg-slate-900/70">
+      {children}
+    </article>
   );
 }
 
@@ -201,26 +221,6 @@ function ArrowDownIcon() {
   );
 }
 
-function HeroButton({ children, onClick }) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className="inline-flex min-w-[172px] items-center justify-center gap-2 rounded-full border border-white/15 bg-white/12 px-5 py-3 text-sm font-medium text-white shadow-[0_10px_30px_rgba(0,0,0,0.15)] backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:bg-white/18"
-    >
-      {children}
-    </button>
-  );
-}
-
-function InfoCard({ children }) {
-  return (
-    <article className="rounded-2xl border border-slate-800 bg-slate-900/45 p-6 transition duration-300 hover:border-slate-700 hover:bg-slate-900/70">
-      {children}
-    </article>
-  );
-}
-
 export default function Resume() {
   return (
     <div className="bg-slate-950 text-slate-300">
@@ -233,11 +233,10 @@ export default function Resume() {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.14),transparent_34%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.08),transparent_28%)]" />
+        <div className="absolute inset-0 bg-black/10" />
 
         <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center px-6 py-16 text-center">
-          <div className="mb-8 h-32 w-32 overflow-hidden rounded-full border-4 border-white/25 shadow-[0_20px_80px_rgba(0,0,0,0.25)] sm:h-40 sm:w-40">
+          <div className="mb-8 h-32 w-32 overflow-hidden rounded-full border-4 border-white/25 shadow-2xl sm:h-40 sm:w-40">
             <img
               src="/profile.jpg"
               alt="Profile"
@@ -378,7 +377,7 @@ export default function Resume() {
                   </p>
                 </div>
 
-                <div className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/45 p-5">
+                <div className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/50 p-5">
                   <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">
                     Coding Focus
                   </h3>
