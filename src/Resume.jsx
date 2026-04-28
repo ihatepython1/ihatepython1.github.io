@@ -164,7 +164,7 @@ function PdfLink({ href, dark = false }) {
           : "border-white/15 bg-white/10 text-white/90 backdrop-blur-sm hover:-translate-y-0.5 hover:border-white/35 hover:bg-white/15"
       }`}
     >
-      PDF
+      My Resume
     </a>
   );
 }
