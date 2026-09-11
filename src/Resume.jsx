@@ -17,9 +17,43 @@ const skills = {
     "MySQL / PostgreSQL",
     "API Integration",
   ],
+  communication: [
+    "Thai (Native)",
+    "English Reading & Writing (Good)",
+    "English Speaking (Conversational)",
+    "Requirements Gathering",
+    "Stakeholder Reporting",
+    "Training Materials",
+    "Presentations",
+  ],
+  videoEditing: ["CapCut"],
 };
 
 const projects = [
+  {
+    title: "Retail Price Comparison Bot",
+    description:
+      "Built a bot that tracks product prices across Makro PRO, Lotus's, and Big C for a retail shop. It uses Playwright with persistent browser sessions and network interception, trigram-based fuzzy matching for Thai product names, and strict unit-for-unit price comparison.",
+    tags: ["Playwright", "Web Scraping", "Fuzzy Matching", "Automation"],
+  },
+  {
+    title: "LINE Mini App",
+    description:
+      "Developed a LINE Mini App with geofencing to detect users in the Bangkok metro area, PDPA consent recording, and a deep-link flow that sends customers to Shopee.",
+    tags: ["LINE Mini App", "Geofencing", "PDPA", "Deep Linking"],
+  },
+  {
+    title: "FLOW B2B Commerce Platform",
+    description:
+      "Worked on FLOW, a B2B commerce platform for retail stores, and its staff-facing ordering system. Visited stores to gather operational problems, reported findings to the development team's executives, turned meeting notes into a deduplicated product backlog, and created training materials for the ordering and coin-redemption features.",
+    tags: ["Requirements Gathering", "Product Backlog", "Training Materials", "Retail"],
+  },
+  {
+    title: "US Stock Screener & Backtester",
+    description:
+      "Built a Python system that screens US stocks for bullish candlestick patterns with confluence filters and backtests them across 200,000+ trades, plus a React dashboard with market regime assessment and multi-signal scoring. Testing showed profit-target exits gave the biggest improvement, implemented as bracket (OCO) orders.",
+    tags: ["Python", "React", "Backtesting", "Data Analysis"],
+  },
   {
     title: "Sales Performance Dashboard",
     description:
@@ -83,17 +117,13 @@ const education = [
   {
     school: "Chiang Mai University",
     degree: "B.Sc. in Computer Science",
-    period: "Expected Graduation: 2026",
+    period: "Graduated 2026",
     details:
       "Relevant coursework: Data Science, Machine Learning, Statistics, Database Systems, Data Mining, Artificial Intelligence",
   },
 ];
 
 const certifications = [
-  "Data Analysis with Python",
-  "SQL for Data Analytics",
-  "Data Visualization Fundamentals",
-  "Machine Learning Foundations",
   "Honorable Mention Award, Faculty of Science Project",
 ];
 
@@ -115,10 +145,10 @@ function scrollToPortfolio() {
 function SectionTitle({ title, subtitle }) {
   return (
     <div className="mb-6">
-      <p className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-violet-300/70">
+      <p className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-accent">
         {subtitle}
       </p>
-      <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+      <h2 className="text-2xl font-bold tracking-tight text-ink sm:text-3xl">
         {title}
       </h2>
     </div>
@@ -127,7 +157,7 @@ function SectionTitle({ title, subtitle }) {
 
 function Tag({ children }) {
   return (
-    <span className="rounded-full border border-violet-300/20 bg-violet-300/10 px-3 py-1 text-xs font-medium text-violet-100">
+    <span className="rounded-full border border-accent/15 bg-accent-soft px-3 py-1 text-xs font-medium text-accent-strong">
       {children}
     </span>
   );
@@ -142,8 +172,8 @@ function SocialLink({ href, label, children, dark = false }) {
       aria-label={label}
       className={`flex h-11 w-11 items-center justify-center rounded-full border transition duration-300 ${
         dark
-          ? "border-slate-700 bg-slate-900/60 text-slate-300 hover:-translate-y-0.5 hover:border-violet-300/40 hover:text-violet-200"
-          : "border-white/15 bg-white/10 text-white/90 backdrop-blur-sm hover:-translate-y-0.5 hover:border-white/35 hover:bg-white/15"
+          ? "border-line bg-transparent text-body hover:-translate-y-0.5 hover:border-accent/40 hover:text-accent"
+          : "border-line bg-surface text-body shadow-sm hover:-translate-y-0.5 hover:border-accent/40 hover:text-accent"
       }`}
     >
       {children}
@@ -160,8 +190,8 @@ function PdfLink({ href, dark = false }) {
       aria-label="View PDF Portfolio"
       className={`inline-flex h-11 items-center justify-center rounded-full border px-4 text-xs font-semibold uppercase tracking-[0.18em] transition duration-300 ${
         dark
-          ? "border-slate-700 bg-slate-900/60 text-slate-300 hover:-translate-y-0.5 hover:border-violet-300/40 hover:text-violet-200"
-          : "border-white/15 bg-white/10 text-white/90 backdrop-blur-sm hover:-translate-y-0.5 hover:border-white/35 hover:bg-white/15"
+          ? "border-line bg-transparent text-body hover:-translate-y-0.5 hover:border-accent/40 hover:text-accent"
+          : "border-line bg-surface text-body shadow-sm hover:-translate-y-0.5 hover:border-accent/40 hover:text-accent"
       }`}
     >
       My Resume
@@ -174,7 +204,7 @@ function HeroButton({ children, onClick }) {
     <button
       type="button"
       onClick={onClick}
-      className="inline-flex min-w-[172px] items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-3 text-sm font-medium text-white shadow-2xl backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:bg-white/15"
+      className="inline-flex min-w-[172px] items-center justify-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-medium text-white shadow-lg shadow-accent/25 transition duration-300 hover:-translate-y-0.5 hover:bg-accent-strong"
     >
       {children}
     </button>
@@ -183,7 +213,7 @@ function HeroButton({ children, onClick }) {
 
 function InfoCard({ children }) {
   return (
-    <article className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition duration-300 hover:border-slate-700 hover:bg-slate-900/70">
+    <article className="rounded-2xl border border-line bg-surface p-6 transition duration-300 hover:border-accent/30">
       {children}
     </article>
   );
@@ -223,20 +253,16 @@ function ArrowDownIcon() {
 
 export default function Resume() {
   return (
-    <div className="bg-slate-950 text-slate-300">
+    <div className="bg-paper text-body">
       <section
         className="relative flex min-h-screen items-center overflow-hidden"
         style={{
           backgroundImage:
-            "linear-gradient(135deg, rgba(86, 46, 186, 0.88), rgba(60, 36, 136, 0.88)), url('/hero-bg.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+            "radial-gradient(ellipse at top, #E9E4F8 0%, rgba(233, 228, 248, 0) 60%), linear-gradient(180deg, #F1EEFA 0%, #F4F3F8 100%)",
         }}
       >
-        <div className="absolute inset-0 bg-black/10" />
-
         <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center px-6 py-16 text-center">
-          <div className="mb-8 h-32 w-32 overflow-hidden rounded-full border-4 border-white/25 shadow-2xl sm:h-40 sm:w-40">
+          <div className="mb-8 h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow-xl shadow-accent/15 sm:h-40 sm:w-40">
             <img
               src="/profile.jpg"
               alt="Profile"
@@ -244,26 +270,26 @@ export default function Resume() {
             />
           </div>
 
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.34em] text-violet-100/75">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.34em] text-accent">
             Welcome to my portfolio
           </p>
 
-          <h1 className="text-4xl font-light tracking-tight text-white sm:text-6xl md:text-7xl">
+          <h1 className="text-4xl font-light tracking-tight text-ink sm:text-6xl md:text-7xl">
             Hello, I’m Poon
           </h1>
 
-          <p className="mt-5 max-w-2xl text-base leading-8 text-violet-100/90 sm:text-lg">
+          <p className="mt-5 max-w-2xl text-base leading-8 text-body sm:text-lg">
             Recent graduate passionate about developer and data analyst roles,
             with a strong interest in building practical systems, analyzing data,
             and continuously improving through real-world projects.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <span className="text-xs font-semibold uppercase tracking-[0.28em] text-violet-100/75">
+            <span className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">
               Let’s Connect
             </span>
 
-            <div className="h-px w-10 bg-white/25" />
+            <div className="h-px w-10 bg-line" />
 
             <div className="flex flex-wrap items-center justify-center gap-3">
               <SocialLink
@@ -305,16 +331,16 @@ export default function Resume() {
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
             <aside className="space-y-8 lg:sticky lg:top-0 lg:h-screen lg:py-10">
               <div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-violet-300/75">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-accent">
                   Resume / Portfolio
                 </p>
-                <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+                <h2 className="text-4xl font-bold tracking-tight text-ink sm:text-5xl">
                   Noppawit Putthanbut
                 </h2>
-                <p className="mt-4 text-lg font-medium text-slate-200">
+                <p className="mt-4 text-lg font-medium text-ink">
                   Developer / Data Analyst
                 </p>
-                <p className="mt-6 max-w-md leading-8 text-slate-400">
+                <p className="mt-6 max-w-md leading-8 text-body">
                   I am a recent graduate with a strong interest in developer and
                   data analyst roles. I am eager to apply my knowledge, gain
                   practical experience, and continuously develop my skills to
@@ -347,7 +373,7 @@ export default function Resume() {
                 <PdfLink href="/portfolio.pdf" dark />
               </div>
 
-              <div className="space-y-2 text-sm text-slate-500">
+              <div className="space-y-2 text-sm text-muted">
                 <p>Lampang, Thailand</p>
                 <p>B.Sc. Computer Science, Chiang Mai University</p>
                 <p>noppawitpoon@gmail.com</p>
@@ -357,7 +383,7 @@ export default function Resume() {
             <section className="space-y-12 lg:py-10">
               <div>
                 <SectionTitle title="About" subtitle="Introduction" />
-                <div className="space-y-4 leading-8 text-slate-300">
+                <div className="space-y-4 leading-8 text-body">
                   <p>
                     I am a recent graduate who is eager to start a career in
                     developer and data analyst roles. I am passionate about
@@ -375,10 +401,16 @@ export default function Resume() {
                     improving system workflows, and solving problems through
                     programming.
                   </p>
+                  <p>
+                    Beyond coding, I visit stores to understand day-to-day
+                    problems, report findings to management, and create
+                    training materials that help staff use new systems. I also
+                    edit videos with CapCut.
+                  </p>
                 </div>
 
-                <div className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/50 p-5">
-                  <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">
+                <div className="mt-6 rounded-2xl border border-line bg-surface p-5">
+                  <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-ink">
                     Coding Focus
                   </h3>
                   <div className="flex flex-wrap gap-2">
@@ -396,15 +428,15 @@ export default function Resume() {
                     <InfoCard key={`${item.role}-${item.company}`}>
                       <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                         <div>
-                          <h3 className="text-lg font-semibold text-white">
+                          <h3 className="text-lg font-semibold text-ink">
                             {item.role}
                           </h3>
-                          <p className="text-sm text-violet-300">{item.company}</p>
+                          <p className="text-sm text-accent">{item.company}</p>
                         </div>
-                        <p className="text-sm text-slate-500">{item.period}</p>
+                        <p className="text-sm text-muted">{item.period}</p>
                       </div>
 
-                      <ul className="mt-4 space-y-2 text-sm leading-7 text-slate-300">
+                      <ul className="mt-4 space-y-2 text-sm leading-7 text-body">
                         {item.points.map((point) => (
                           <li key={point}>• {point}</li>
                         ))}
@@ -419,10 +451,10 @@ export default function Resume() {
                 <div className="space-y-4">
                   {projects.map((project) => (
                     <InfoCard key={project.title}>
-                      <h3 className="text-lg font-semibold text-white">
+                      <h3 className="text-lg font-semibold text-ink">
                         {project.title}
                       </h3>
-                      <p className="mt-3 text-sm leading-7 text-slate-300">
+                      <p className="mt-3 text-sm leading-7 text-body">
                         {project.description}
                       </p>
                       <div className="mt-4 flex flex-wrap gap-2">
@@ -441,14 +473,14 @@ export default function Resume() {
                   <InfoCard key={item.school}>
                     <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                       <div>
-                        <h3 className="text-lg font-semibold text-white">
+                        <h3 className="text-lg font-semibold text-ink">
                           {item.degree}
                         </h3>
-                        <p className="text-sm text-violet-300">{item.school}</p>
+                        <p className="text-sm text-accent">{item.school}</p>
                       </div>
-                      <p className="text-sm text-slate-500">{item.period}</p>
+                      <p className="text-sm text-muted">{item.period}</p>
                     </div>
-                    <p className="mt-4 text-sm leading-7 text-slate-300">
+                    <p className="mt-4 text-sm leading-7 text-body">
                       {item.details}
                     </p>
                   </InfoCard>
@@ -456,11 +488,11 @@ export default function Resume() {
               </div>
 
               <div>
-                <SectionTitle title="Skills & Certifications" subtitle="Tools I Use" />
+                <SectionTitle title="Skills & Awards" subtitle="Tools I Use" />
 
                 <div className="space-y-4">
                   <InfoCard>
-                    <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">
+                    <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-ink">
                       Programming
                     </h3>
                     <div className="flex flex-wrap gap-2">
@@ -471,7 +503,7 @@ export default function Resume() {
                   </InfoCard>
 
                   <InfoCard>
-                    <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">
+                    <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-ink">
                       Analytics
                     </h3>
                     <div className="flex flex-wrap gap-2">
@@ -482,7 +514,7 @@ export default function Resume() {
                   </InfoCard>
 
                   <InfoCard>
-                    <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">
+                    <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-ink">
                       Visualization
                     </h3>
                     <div className="flex flex-wrap gap-2">
@@ -493,7 +525,7 @@ export default function Resume() {
                   </InfoCard>
 
                   <InfoCard>
-                    <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">
+                    <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-ink">
                       Tools & Libraries
                     </h3>
                     <div className="flex flex-wrap gap-2">
@@ -504,8 +536,30 @@ export default function Resume() {
                   </InfoCard>
 
                   <InfoCard>
-                    <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">
-                      Certifications / Awards
+                    <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-ink">
+                      Communication
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {skills.communication.map((item) => (
+                        <Tag key={item}>{item}</Tag>
+                      ))}
+                    </div>
+                  </InfoCard>
+
+                  <InfoCard>
+                    <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-ink">
+                      Video Editing
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {skills.videoEditing.map((item) => (
+                        <Tag key={item}>{item}</Tag>
+                      ))}
+                    </div>
+                  </InfoCard>
+
+                  <InfoCard>
+                    <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-ink">
+                      Awards
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       {certifications.map((item) => (
