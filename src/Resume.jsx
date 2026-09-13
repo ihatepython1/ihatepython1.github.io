@@ -49,6 +49,12 @@ const projects = [
     tags: ["Requirements Gathering", "Product Backlog", "Training Materials", "Retail"],
   },
   {
+    title: "Rayong Botanical Garden Web App & Chatbot",
+    description:
+      "Team project delivered to a provincial botanical garden and now in real use. The web chatbot answers visitor questions from a curated information database, and geolocation helps visitors orient themselves within the grounds. My role covered the web interface design and the chatbot's information database.",
+    tags: ["React", "Chatbot", "Geolocation", "Database"],
+  },
+  {
     title: "US Stock Screener & Backtester",
     description:
       "Built a Python system that screens US stocks for bullish candlestick patterns with confluence filters and backtests them across 200,000+ trades, plus a React dashboard with market regime assessment and multi-signal scoring. Testing showed profit-target exits gave the biggest improvement, implemented as bracket (OCO) orders.",
