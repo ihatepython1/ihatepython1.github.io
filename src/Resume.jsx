@@ -82,39 +82,25 @@ const projects = [
 
 const experience = [
   {
-    role: "Data Analyst / Data Science Project Developer",
-    company: "Academic & Personal Projects",
+    role: "Product Owner",
+    company: "T.C.C Technology Group",
     period: "2024 — Present",
     points: [
-      "Collected, cleaned, and transformed structured data for analysis and reporting.",
-      "Designed dashboards and summary reports to support decision-making and performance monitoring.",
-      "Applied statistical and machine learning techniques to solve classification and prediction problems.",
-      "Presented technical findings in clear business language with visual storytelling.",
-      "Worked with Python, SQL, and JavaScript to build practical solutions for data-related tasks.",
-      "Improved project quality through debugging, testing, and refining data processing workflows.",
+      "Own the product backlog for a retail commerce platform: gather requirements during store visits, turn meeting notes into prioritized, deduplicated backlog items, and report findings to executives.",
+      "Handle customer service directly, answering questions from store staff and customers and feeding recurring issues back into the roadmap.",
+      "Create training materials and presentations that walk staff through new features in plain language.",
+      "Define acceptance criteria and work with developers through delivery, then follow up on-site to confirm features solve the original problem.",
     ],
   },
   {
-    role: "System & Analytics Project Contributor",
-    company: "Software / Data-driven Projects",
-    period: "2023 — Present",
+    role: "Application Developer",
+    company: "T.C.C Technology Group",
+    period: "2024 — Present",
     points: [
-      "Worked on systems that integrate APIs, cloud-based data storage, and automated workflows.",
-      "Translated real-world requirements into measurable metrics, reports, and actionable insights.",
-      "Supported data pipelines and analysis processes for operational and business reporting.",
-      "Contributed to frontend and backend development tasks for small-scale web and system projects.",
-      "Used programming knowledge to support feature development, data handling, and system improvement.",
-    ],
-  },
-  {
-    role: "Developer / Coding Project Builder",
-    company: "University & Self-initiated Projects",
-    period: "2023 — Present",
-    points: [
-      "Developed coding projects involving web interfaces, data processing, and user-focused system design.",
-      "Practiced writing clean and understandable code using JavaScript, React, Python, C, and C++.",
-      "Built project components such as forms, dashboards, automation logic, and data connections.",
-      "Strengthened problem-solving skills by implementing features, fixing bugs, and improving usability.",
+      "Implement the requirements assigned to me, from web applications to LINE Mini Apps and LINE chatbots used by real customers.",
+      "Developed frontend interfaces in React and connected them to backend services, APIs, and databases.",
+      "Automated manual work with Python, including price tracking across multiple retailers and order handling through Google Sheets.",
+      "Debugged and improved live features based on feedback from staff and customers.",
     ],
   },
 ];
@@ -341,7 +327,7 @@ export default function Resume() {
                   Resume / Portfolio
                 </p>
                 <h2 className="text-4xl font-bold tracking-tight text-ink sm:text-5xl">
-                  Noppawit Putthanbut
+                  Noppavit Putthanbutr
                 </h2>
                 <p className="mt-4 text-lg font-medium text-ink">
                   Developer / Data Analyst
