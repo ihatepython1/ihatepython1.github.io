@@ -271,9 +271,9 @@ export default function Resume() {
           </h1>
 
           <p className="mt-5 max-w-2xl text-base leading-8 text-body sm:text-lg">
-            Recent graduate passionate about developer and data analyst roles,
-            with a strong interest in building practical systems, analyzing data,
-            and continuously improving through real-world projects.
+            Product Owner and Application Developer at T.C.C Technology Group,
+            building practical systems for real users — from product backlogs and
+            customer service to web apps, LINE Mini Apps, and data automation.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -330,13 +330,13 @@ export default function Resume() {
                   Noppavit Putthanbutr
                 </h2>
                 <p className="mt-4 text-lg font-medium text-ink">
-                  Developer / Data Analyst
+                  Product Owner / Application Developer
                 </p>
                 <p className="mt-6 max-w-md leading-8 text-body">
-                  I am a recent graduate with a strong interest in developer and
-                  data analyst roles. I am eager to apply my knowledge, gain
-                  practical experience, and continuously develop my skills to
-                  grow in my career.
+                  I work across both sides of product delivery: owning a
+                  backlog and handling customer service, and building the web
+                  apps and automation behind it. I care about systems that
+                  solve the problem people actually have.
                 </p>
               </div>
 
@@ -377,21 +377,21 @@ export default function Resume() {
                 <SectionTitle title="About" subtitle="Introduction" />
                 <div className="space-y-4 leading-8 text-body">
                   <p>
-                    I am a recent graduate who is eager to start a career in
-                    developer and data analyst roles. I am passionate about
-                    learning, improving my skills, and continuously developing
-                    myself through real-world experience and new challenges.
+                    I am a Product Owner and Application Developer at T.C.C
+                    Technology Group, where I have worked since 2024. I own a
+                    product backlog, handle frontline customer service, and
+                    build the applications that support both.
                   </p>
                   <p>
-                    I enjoy working on practical projects involving web
-                    development, data analysis, dashboards, and systems that
-                    help users and organizations make better decisions.
+                    I enjoy practical work involving web development, data
+                    analysis, dashboards, and systems that help users and
+                    organizations make better decisions.
                   </p>
                   <p>
-                    I also have a strong interest in coding and software
-                    development, especially in building useful applications,
-                    improving system workflows, and solving problems through
-                    programming.
+                    My strongest language is Python, with React as a close
+                    second. I like building useful applications, improving
+                    system workflows, and automating work that people
+                    otherwise do by hand.
                   </p>
                   <p>
                     Beyond coding, I visit stores to understand day-to-day
