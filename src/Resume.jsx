@@ -18,9 +18,6 @@ const skills = {
     "API Integration",
   ],
   communication: [
-    "Thai (Native)",
-    "English Reading & Writing (Good)",
-    "English Speaking (Conversational)",
     "Requirements Gathering",
     "Stakeholder Reporting",
     "Training Materials",
@@ -28,6 +25,25 @@ const skills = {
   ],
   videoEditing: ["CapCut"],
 };
+
+const languageContent = [
+  {
+    label: "Thai",
+    text: "Native. Write customer-facing copy, chatbot responses, and training materials read by store staff and customers.",
+  },
+  {
+    label: "English",
+    text: "Professional reading and writing; conversational speaking.",
+  },
+  {
+    label: "Bilingual technical writing",
+    text: "Explain system behaviour in plain Thai for non-technical users.",
+  },
+  {
+    label: "Thai-language engineering",
+    text: "Trigram fuzzy matching for Thai product names; curated the Thai answer database for a public chatbot.",
+  },
+];
 
 const projects = [
   {
@@ -89,7 +105,8 @@ const experience = [
       "Own the product backlog for a retail commerce platform: gather requirements during store visits, turn meeting notes into prioritized, deduplicated backlog items, and report findings to executives.",
       "Handle customer service directly, answering questions from store staff and customers and feeding recurring issues back into the roadmap.",
       "Create training materials and presentations that walk staff through new features in plain language.",
-      "Define acceptance criteria and work with developers through delivery, then follow up on-site to confirm features solve the original problem.",
+      "Define acceptance criteria and review deliverables against them, documenting why work passes or fails.",
+      "Work with developers through delivery and follow up on-site to confirm features solve the original problem.",
     ],
   },
   {
@@ -536,6 +553,22 @@ export default function Resume() {
                         <Tag key={item}>{item}</Tag>
                       ))}
                     </div>
+                  </InfoCard>
+
+                  <InfoCard>
+                    <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-ink">
+                      Language &amp; Content
+                    </h3>
+                    <ul className="space-y-2">
+                      {languageContent.map((item) => (
+                        <li key={item.label} className="leading-7">
+                          <span className="font-semibold text-ink">
+                            {item.label}:
+                          </span>{" "}
+                          {item.text}
+                        </li>
+                      ))}
+                    </ul>
                   </InfoCard>
 
                   <InfoCard>
