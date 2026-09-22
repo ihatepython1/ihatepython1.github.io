@@ -180,8 +180,15 @@ export default function Resume() {
     <main>
       <section className="hero section-wrap" id="home">
         <div className="hero-top"><p className="eyebrow">Welcome to my portfolio</p><span className="location"><span className="status-dot" /> Lampang, Thailand</span></div>
-        <div className="hero-intro"><img src="/profile.jpg" alt="Poon — Noppavit Putthanbutr" width="64" height="64" /><h1>Hello, I’m Poon <span>— Noppavit Putthanbutr</span></h1></div>
-        <div className="hero-display" aria-label="Product Owner / Application Developer"><div className="hero-line"><span>PRODUCT</span><span className="hero-star" aria-hidden="true">✳</span></div><div className="hero-line second"><span className="outline-word">OWNER</span><span className="hero-divider" aria-hidden="true" /><span className="hero-mini">& APPLICATION<br />DEVELOPER <ArrowUpRight /></span></div></div>
+        <div className="hero-intro"><h1>Hello, I’m Poon <span>— Noppavit Putthanbutr</span></h1></div>
+        <div className="portrait-poster">
+          <div className="poster-type" aria-label="Product Owner / Application Developer"><span>PRODUCT</span><span>DEVELOPER</span></div>
+          <div className="poster-specialties"><span>/ PRODUCT OWNER</span><span>/ APPLICATION DEVELOPER</span><span>/ DATA AUTOMATION</span></div>
+          <svg className="portrait-clip-def" width="0" height="0" aria-hidden="true"><defs><clipPath id="portrait-silhouette" clipPathUnits="objectBoundingBox"><path d="M .5 .109 C .44 .106 .373 .12 .329 .148 C .284 .172 .272 .223 .286 .271 L .303 .328 C .288 .343 .296 .381 .321 .399 L .333 .408 C .341 .46 .365 .49 .39 .518 L .389 .546 C .36 .56 .347 .577 .326 .591 L .265 .613 L .164 .636 C .104 .649 .057 .657 .041 .697 L .005 .776 L 0 .81 L 0 1 L 1 1 L 1 .795 L .974 .704 C .96 .667 .952 .661 .906 .65 L .781 .617 L .695 .585 C .659 .57 .633 .549 .62 .526 L .626 .503 C .661 .476 .678 .44 .688 .413 C .716 .406 .733 .375 .726 .347 L .712 .331 L .713 .285 C .733 .252 .709 .206 .701 .189 C .695 .16 .659 .142 .622 .134 C .584 .113 .553 .104 .5 .109 Z" /></clipPath></defs></svg>
+          <img className="hero-portrait" src="/profile.jpg" alt="Poon — Noppavit Putthanbutr" width="1086" height="1448" fetchPriority="high" />
+          <div className="poster-side-note" aria-hidden="true">BUILD<br />SOLVE<br />IMPROVE<br />REPEAT <ArrowDown size={17} /></div>
+          <span className="poster-name">NOPPAVIT PUTTHANBUTR</span>
+        </div>
         <div className="hero-bottom"><p>Product Owner and Application Developer at T.C.C Technology Group, building practical systems for real users — from product backlogs and customer service to web apps, LINE Mini Apps, and data automation.</p><a className="round-cta" href="#portfolio"><span>View Portfolio</span><span className="circle"><ArrowDown /></span></a></div>
         <div className="hero-footer"><span className="eyebrow">Let’s Connect</span><Socials /><span className="hero-scroll-label">SCROLL TO EXPLORE ↓</span></div>
       </section>
